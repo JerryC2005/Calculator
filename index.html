@@ -4,10 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <link rel="stylesheet" href="styles.css" type="text/styles">
+    <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
 <body>
-    
-    
+    <div id="calculator">
+        <input autocomplete="off"
+        onblur="this.focus()" type="text" id="display" autofocus>
+
+        <div id="btn-container">
+            <button onclick="clearDisplay()" class="btn-etc">C</button>
+            <button id="pm-btn" class="btn-etc">+/-</button>
+            <button onclick="showDisplay('%')" class="btn-etc" id="btn-percent">%</button>
+            <button onclick="showDisplay('/')" class="btn-operator">/</button>
+            <button onclick="showDisplay('7')">7</button>
+            <button onclick="showDisplay('8')">8</button>
+            <button onclick="showDisplay('9')">9</button>
+            <button onclick="showDisplay('*')" class="btn-operator">*</button>
+            <button onclick="showDisplay('4')">4</button>
+            <button onclick="showDisplay('5')">5</button>
+            <button onclick="showDisplay('6')">6</button>
+            <button onclick="showDisplay('-')" class="btn-operator">-</button>
+            <button onclick="showDisplay('1')" class="btn-num-1">1</button>
+            <button onclick="showDisplay('2')">2</button>
+            <button onclick="showDisplay('3')">3</button>
+            <button onclick="showDisplay('+')"class="btn-operator">+</button>
+            <button onclick="showDisplay('0')" id="zero-btn">0</button>
+            <button onclick="showDisplay('.')">.</button>
+            <button onclick="calculate()" class="btn-operator">=</button>
+        </div>
+    <script src="script.js"></script>
 </body>
 </html>
