@@ -14,17 +14,20 @@ percent.addEventListener("click", () => {
   display.value = percentage;
 });
 
+//make a number positive or negative
 pmBtn.addEventListener("click", () => {
   if (display.value >= "0") {
     display.value = "-" + display.value;
   } else {
-    display.value = display.value.substring(1);
+    //slice takes the negative sign away
+    display.value = display.value.slice(1);
   }
 });
 
 //display in textbox
 function showDisplay(input) {
   display.value += input;
+
 }
 
 //clear display
@@ -36,7 +39,11 @@ function clearDisplay() {
 function calculate() {
   try {
     display.value = eval(display.value);
+
+    if(display.value === "Infinity") {
+        display.value = "Error"
+    }
   } catch (error) {
-    display.value = "Error";
+        display.value = "Error";
   }
 }
